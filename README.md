@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Decentralized-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Decentralized-Messaging?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Decentralized-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Decentralized-Messaging?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Decentralized-Messaging/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Decentralized-Messaging?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Decentralized-Messaging/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -62,9 +62,9 @@ The table below contrasts mainstream hosted and centralized platforms against en
 
 ## 🔓 Open-Source GitHub Projects
 
-Discover the leading self-hosted, federated, and peer-to-peer messaging platforms. Each project includes real-time stargazers badges linking directly to their GitHub stargazers page, ordered by star count (descending).
+Discover the leading self-hosted, federated, and peer-to-peer messaging platforms. Each project includes real-time stargazers badges linking directly to their GitHub stargazers page, ordered by Stars_Count (descending).
 
-| Project & Repository | GitHub Stars | Architecture & Topology | License | Key Privacy & Metadata Highlights |
+| Project & Repository | GitHub_Stars | Architecture & Topology | License | Key Privacy & Metadata Highlights |
 | :--- | :---: | :--- | :--- | :--- |
 | **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | [![Stars](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=social&color=white)](https://github.com/RocketChat/Rocket.Chat/stargazers) | Self-Hosted / Federated Bridges | MIT | Enterprise team hub with omnichannel routing, end-to-end encryption support, and Matrix federation bridge. |
 | **[Mattermost](https://github.com/mattermost/mattermost)** | [![Stars](https://img.shields.io/github/stars/mattermost/mattermost?style=social&color=white)](https://github.com/mattermost/mattermost/stargazers) | Self-Hosted (Single-Tenant) | MIT / Commercial | Slack alternative for mission-critical developer and SecOps teams with on-premise governance and compliance playbooks. |
@@ -108,7 +108,7 @@ Contributions to this curated catalog are warmly welcome!
 
 1. 🍴 **Fork** the repository.
 2. 🌿 **Create a branch** for your updates (`git checkout -b feature/add-new-tool`).
-3. 📝 **Add entries** following the tabular format and GitHub star badge conventions.
+3. 📝 **Add entries** following the tabular format and GitHub Stars_Badge conventions.
 4. 🚀 **Submit a Pull Request** with a concise description of the tool's encryption and metadata architecture.
 
 Please ensure added projects are open source or clearly labeled SaaS, actively maintained, and verified against verifiable cryptographic standards.
@@ -144,3 +144,12 @@ Your encouragement and support help keep this list comprehensive, independent, a
 <p align="center">
   <sub>Curated with care by <a href="https://github.com/ishandutta2007">Ishan Dutta</a> and the global open-source decentralized privacy community.</sub>
 </p>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Decentralized-Messaging&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Decentralized-Messaging_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Decentralized-Messaging_growth.svg">
+  </picture>
+</a>
