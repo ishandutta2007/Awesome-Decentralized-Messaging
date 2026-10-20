@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; border-radius:12px; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accents -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <radialGradient id="glowPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-12px) translateX(6px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes packetFlow {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes pulseRing {
+      0% { r: 6px; opacity: 0.9; }
+      50% { r: 12px; opacity: 0.3; }
+      100% { r: 6px; opacity: 0.9; }
+    }
+    .bg-grid { stroke: rgba(255, 255, 255, 0.04); stroke-width: 1; }
+    .node-orbit { animation: pulseGlow 6s ease-in-out infinite; transform-origin: center; }
+    .particle { animation: floatParticle 4s ease-in-out infinite; }
+    .stream-line { stroke-dasharray: 8 12; animation: packetFlow 4s linear infinite; }
+    .node-ping { animation: pulseRing 3s ease-in-out infinite; }
+    .badge-tag { fill: rgba(99, 102, 241, 0.15); stroke: rgba(99, 102, 241, 0.4); rx: 14; }
+  </style>
+
+  <!-- Background Rect -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Matrix/Mesh Background Grid Pattern -->
+  <g class="bg-grid">
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="250" y1="0" x2="250" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="550" y1="0" x2="550" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="850" y1="0" x2="850" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+    <line x1="1150" y1="0" x2="1150" y2="360" />
+    
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <circle cx="200" cy="80" r="140" fill="url(#glowPulse)" class="node-orbit" />
+  <circle cx="1020" cy="260" r="160" fill="url(#glowPulse)" class="node-orbit" style="animation-delay: -3s;" />
+
+  <!-- Animated Mesh Flow Network in the background (Nodes & Packets) -->
+  <g opacity="0.45">
+    <!-- Connecting P2P Flow Lines -->
+    <path d="M 80,180 Q 220,90 360,160 T 640,110 T 920,200 T 1140,140" fill="none" stroke="#06b6d4" stroke-width="2" class="stream-line" />
+    <path d="M 60,260 Q 280,310 520,220 T 880,260 T 1150,220" fill="none" stroke="#6366f1" stroke-width="1.8" class="stream-line" style="animation-duration: 5s; animation-direction: reverse;" />
+
+    <!-- Peer Nodes -->
+    <circle cx="80" cy="180" fill="#06b6d4" r="5" />
+    <circle cx="360" cy="160" fill="#6366f1" r="6" />
+    <circle cx="640" cy="110" fill="#10b981" r="5" />
+    <circle cx="920" cy="200" fill="#06b6d4" r="7" />
+    <circle cx="1140" cy="140" fill="#6366f1" r="5" />
+
+    <!-- Pulsing Rings around Nodes -->
+    <circle cx="920" cy="200" fill="none" stroke="#06b6d4" stroke-width="2" class="node-ping" />
+    <circle cx="360" cy="160" fill="none" stroke="#6366f1" stroke-width="2" class="node-ping" style="animation-delay: -1.5s;" />
+
+    <!-- Floating Security Particles -->
+    <circle cx="150" cy="120" r="3" fill="#38bdf8" class="particle" />
+    <circle cx="480" cy="70" r="2.5" fill="#a78bfa" class="particle" style="animation-delay: -1s;" />
+    <circle cx="780" cy="80" r="3.5" fill="#34d399" class="particle" style="animation-delay: -2s;" />
+    <circle cx="1060" cy="110" r="2.5" fill="#38bdf8" class="particle" style="animation-delay: -2.5s;" />
+    <circle cx="280" cy="280" r="3" fill="#818cf8" class="particle" style="animation-delay: -1.8s;" />
+    <circle cx="820" cy="300" r="3" fill="#34d399" class="particle" style="animation-delay: -0.5s;" />
+  </g>
+
+  <!-- FOREGROUND: Clear Title, Subtitle, and Feature Tags (Always completely visible & in front) -->
+  <g filter="url(#dropShadow)" text-anchor="middle">
+    <!-- Top Pill Tag -->
+    <rect x="440" y="32" width="320" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <text x="600" y="52" fill="#38bdf8" font-size="13" font-weight="600" letter-spacing="1.5">⚡ CURATED ECOSYSTEM DIRECTORY</text>
+
+    <!-- Main Title -->
+    <text x="600" y="125" fill="#ffffff" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Awesome Decentralized Messaging
+    </text>
+
+    <!-- Subtitle (Gradient Fill) -->
+    <text x="600" y="165" fill="url(#accentGrad)" font-size="20" font-weight="600" letter-spacing="0.5">
+      Federated Protocols • Peer-to-Peer Mesh • Metadata Minimization • Sovereign Chat
+    </text>
+
+    <!-- Short Description -->
+    <text x="600" y="210" fill="#94a3b8" font-size="15" font-weight="400">
+      Enterprise SaaS Collaboration &amp; Open-Source Privacy Architectures Compared
+    </text>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(195, 255)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="180" height="42" rx="21" class="badge-tag" />
+      <text x="90" y="26" fill="#c7d2fe" font-size="14" font-weight="600">🛡️ Zero Metadata</text>
+
+      <!-- Pill 2 -->
+      <rect x="210" y="0" width="190" height="42" rx="21" class="badge-tag" stroke="rgba(6, 182, 212, 0.4)" fill="rgba(6, 182, 212, 0.15)" />
+      <text x="305" y="26" fill="#a5f3fc" font-size="14" font-weight="600">🌐 Matrix &amp; P2P Mesh</text>
+
+      <!-- Pill 3 -->
+      <rect x="430" y="0" width="180" height="42" rx="21" class="badge-tag" stroke="rgba(16, 185, 129, 0.4)" fill="rgba(16, 185, 129, 0.15)" />
+      <text x="520" y="26" fill="#a7f3d0" font-size="14" font-weight="600">🔐 E2EE &amp; Audited</text>
+
+      <!-- Pill 4 -->
+      <rect x="640" y="0" width="170" height="42" rx="21" class="badge-tag" stroke="rgba(244, 63, 94, 0.4)" fill="rgba(244, 63, 94, 0.15)" />
+      <text x="725" y="26" fill="#fecdd3" font-size="14" font-weight="600">📦 Self-Hostable</text>
+    </g>
+  </g>
+</svg>
